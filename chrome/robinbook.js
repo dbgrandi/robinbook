@@ -1,33 +1,20 @@
 function Robinbook(config) {
 
   config.is_book = false;
-  
-  config.buttonSelector   = '#totallyAwesomeSelfieButton';
-  config.toggleSelector = '#selfieToggle';
-  config.setupComplete    = false;
-  config.selfiesTaken     = 0;
 
-  config.toggleHTML = (
-    '<button id="selfieToggle" type="button" class="button dark-grey">GIF?</button>'
+  config.buttonHTML = (
+    '<button id="robinbook" type="button" class="button">Free!</button>'
   );
 
   this.setupRobinbook = function setupRB () {
     // is it a book?
     // YES => clone the button
-    placeButton($(a-button-list))
+
+    $('<h1>HELLOHELLO</h1>').insertBefore($('#ap_container'));
+    $(config.buttonHTML).insertAfter($('.a-button-list :last-child'));
+    $(config.buttonSelector).on('click', launchRobin);
     
     // kick off the background scaper
-  }
-
-  function placeButton (candidate) {
-    $(config.buttonHTML).insertAfter(candidate);
-  }
-
-  function setupEvents () {
-    $(config.buttonSelector).on('click', launchRobin);
-    $(config.buttonSelector).hover(startVideo);
-    $('.write-tab').on('click', showElements);
-    $('.preview-tab').on('click', hideElements);
   }
   
   function launchRobin () {
@@ -36,6 +23,6 @@ function Robinbook(config) {
 }
 
 (function() {
-  var config = {}, client = new Robinbook(config);
+  var client = new Robinbook({});
   client.setupRobinbook();
 })();
