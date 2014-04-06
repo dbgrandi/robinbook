@@ -2,19 +2,46 @@ function Robinbook(config) {
 
   config.is_book = false;
 
-  config.buttonHTML = (
-    '<button id="robinbook" type="button" class="button">Free!</button>'
-  );
-
   this.setupRobinbook = function setupRB () {
-    // is it a book?
-    // YES => clone the button
+    if (isBookPage()) {
+      // add the button
+      button = $('.swatchElement').first().clone();
+      button.find('.a-button-text').find('span').first().text("Free");
+      button.find('.a-button-text');
+      
+      // take 
 
-    $('<h1>HELLOHELLO</h1>').insertBefore($('#ap_container'));
-    $(config.buttonHTML).insertAfter($('.a-button-list :last-child'));
-    $(config.buttonSelector).on('click', launchRobin);
+      firstButton = $('.swatchElement').first();
+      $(button).insertBefore(firstButton);
+      
+      // $(config.buttonSelector).on('click', launchRobin);
+      
+      // get the ISBN
+      isbn = getISBN();
+
+      // kick off the background scaper
+    }
+  }
+
+  function isBookPage() {
+    // regular book page has id = dp, class = book
+    classes = $('body').attr('class').split(/\s+/);
+
+    if (classes.indexOf("book") != -1) {
+      return true;
+    }
     
-    // kick off the background scaper
+    // kindle page has no id and class = dp
+    // index = $.inArray("book", classes);
+    // if ($('body').attr('id') == "" && classes.indexOf("dp") != -1) {
+    //   return true;
+    // }
+    
+    return false;
+  }
+  
+  function getISBN() {
+    
   }
   
   function launchRobin () {
