@@ -4,11 +4,15 @@
 
   "name": "RobinBook",
   "description": "Check your local library for books you seen on Amazon.",
-  "version": "0.2",
+  "version": "1.0",
+  
+  "icons": { "16": "icon-16.png",
+             "48": "icon-48.png",
+            "128": "icon-128.png" },
 
   "permissions": [
-    "https://amazon.com/*",
-    "http://amazon.com/*"
+    "*://*.amazon.com/*",
+    "http://*.amazon.com/*"
   ],
 
   "content_scripts": [
