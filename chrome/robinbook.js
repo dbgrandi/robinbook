@@ -6,15 +6,19 @@ function Robinbook(config) {
     if (isBookPage()) {
       // add the button
       button = $('.swatchElement').first().clone();
-      button.find('.a-button-text').find('span').first().text("Free");
+      button.find('.a-button-text').find('span').first().text("Library");
+      button.find('.a-button-text').find('span').last().text("Free");
+      button.find('.a-button-text').find('.a-icon').remove();
+
+      button.find('.tmm-olp-links').remove();
+      
       button.find('.a-button-text');
       
       // take 
 
       firstButton = $('.swatchElement').first();
       $(button).insertBefore(firstButton);
-      
-      // $(config.buttonSelector).on('click', launchRobin);
+      $(button).on('click', launchRobbin);
       
       // get the ISBN
       isbn = getISBN();
@@ -41,15 +45,19 @@ function Robinbook(config) {
   }
   
   function getISBN() {
-    bold_isbn = $("li b:contains('ISBN-10')")[0];
+    bold_isbn = $("li b:contains('ISBN-13')")[0];
     isbn_li = $(bold_isbn).parent()[0];
     isbn = $(isbn_li).contents()[1]
     return isbn.data.trim();
   }
   
-  function launchRobin () {
-    // load the other 
+  function launchRobbin() {
+    isbn = getISBN();
+    nypl = "http://nypl.bibliocommons.com/search?custom_query=identifier%3A%28" + getISBN() + "%29&page=1&view=medium";
+    window.open(nypl);
+    return false;
   }
+
 }
 
 (function() {
