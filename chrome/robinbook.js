@@ -41,7 +41,10 @@ function Robinbook(config) {
   }
   
   function getISBN() {
-    
+    bold_isbn = $("li b:contains('ISBN-10')")[0];
+    isbn_li = $(bold_isbn).parent()[0];
+    isbn = $(isbn_li).contents()[1]
+    return isbn.data.trim();
   }
   
   function launchRobin () {
