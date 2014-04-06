@@ -1,0 +1,27 @@
+
+{
+  "manifest_version": 2,
+
+  "name": "RobinBook",
+  "description": "Check your local library for books you seen on Amazon.",
+  "version": "0.1",
+
+  "permissions": [
+    "https://amazon.com/*",
+    "http://amazon.com/*"
+  ],
+
+  "content_scripts": [
+    {
+      "js": ["jquery.min.js", "robinbook.js"],
+      "matches": ["*://amazon.com/*"],
+      "run_at": "document_end",
+      "css": ["robinbook.css"]
+    }
+  ],
+  
+  "web_accessible_resources": [
+    "robinbook.css"
+  ]
+
+}
