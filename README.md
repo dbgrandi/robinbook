@@ -5,7 +5,7 @@ A Chrome plugin that, when browsing books on Amazon, will add a link to that boo
 
 ![](./screenshot.png)
 
-This was built for the [Spring 2014 Hack Upstate](http://hackupstate.com/) hackathon. Original idea by [Chris Pugh](http://twitter.com/cpugh29). Refinement, help, encouragement, and beers with Chris Pugh, Joseph Novek, [Gordon Zheng](http://twitter.com/capable_monkey), Dan Clark, and [Chris Campos](http://twitter.com/MrChrisCampos) were also a big part of this being a huge amount of fun.
+This was built for the [Spring 2014 Hack Upstate](http://hackupstate.com/) hackathon. Original idea by [Colin Pugh](http://twitter.com/cpugh29). Refinement, help, encouragement, and beers with Colin Pugh, Joseph Novek, [Gordon Zheng](http://twitter.com/capable_monkey), Dan Clark, and [Chris Campos](http://twitter.com/MrChrisCampos) were also a big part of this being a huge amount of fun.
 
 ## Installation
 
