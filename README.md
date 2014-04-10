@@ -10,7 +10,7 @@ This was built for the [Spring 2014 Hack Upstate](http://hackupstate.com/) hacka
 
 ## Installation
 
-You can get the built plugin on the [Chrome Web Store](https://chrome.google.com/webstore/detail/robinbook/ocnlinnobdihmdhkigacikkdeebeahji), but it may not be the most recent version.
+You can get the built plugin on the [Chrome Web Store](https://chrome.google.com/webstore/detail/robinbook/ocnlinnobdihmdhkigacikkdeebeahji).
 
 ## Contributing
 
