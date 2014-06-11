@@ -53,7 +53,7 @@ function Robinbook(config) {
   
   function launchRobbin() {
     isbn = getISBN();
-    nypl = "http://nypl.bibliocommons.com/search?custom_query=identifier%3A%28" + getISBN() + "%29&page=1&view=medium";
+    nypl = "https://www.worldcat.org/isbn/" + getISBN();
     window.open(nypl);
     return false;
   }
