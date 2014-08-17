@@ -3,7 +3,7 @@
   "manifest_version": 2,
 
   "name": "RobinBook",
-  "description": "Check your local library for books you seen on Amazon.",
+  "description": "Check your local library for books you find on Amazon.",
   "version": "1.0",
   
   "icons": { "16": "icon-16.png",
